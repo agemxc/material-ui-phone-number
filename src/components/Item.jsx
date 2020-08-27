@@ -26,8 +26,8 @@ class Item extends React.PureComponent {
     }
 
     return (
-      <RootRef rootRef={(node) => itemRef(node)}>
         <MenuItem
+          ref={itemRef(node)}
           className="country"
           data-dial-code="1"
           data-country-code={iso2}
@@ -41,7 +41,6 @@ class Item extends React.PureComponent {
 
           <span className="dial-code">{`+${dialCode}`}</span>
         </MenuItem>
-      </RootRef>
     );
   }
 }
