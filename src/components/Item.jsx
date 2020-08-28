@@ -25,21 +25,21 @@ class Item extends React.PureComponent {
     }
 
     return (
-        <MenuItem
-          ref={itemRef(node)}
-          className="country"
-          data-dial-code="1"
-          data-country-code={iso2}
-          {...restProps}
-        >
-          <div className={`flag ${iso2} margin`} />
+      <MenuItem
+        ref={itemRef}
+        className="country"
+        data-dial-code="1"
+        data-country-code={iso2}
+        {...restProps}
+      >
+        <div className={`flag ${iso2} margin`}/>
 
-          <span className="country-name">
+        <span className="country-name">
             {localization || name}
           </span>
 
-          <span className="dial-code">{`+${dialCode}`}</span>
-        </MenuItem>
+        <span className="dial-code">{`+${dialCode}`}</span>
+      </MenuItem>
     );
   }
 }
